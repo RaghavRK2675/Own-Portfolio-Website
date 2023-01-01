@@ -36,14 +36,17 @@
             text-decoration: none;
             color:aliceblue;
             padding: 10px 90px;
+            overflow: hidden;
+            transition: 0.5s;
+
         }
         
         body{
             background-color: white;
         }
         .navbar a:hover{
-            color: coral;
-            background-color: chartreuse;
+            color: honeydew;
+            background-color:turquoise;
         }
         a:hover{
          color: #255784;
@@ -51,6 +54,49 @@
          box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
          transition-delay: 1s;
         }
+        .slideshow{
+            width:200px;
+            position: absolute;
+            top: 5%;
+            left: 44%;
+            overflow: hidden;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 54%, 51% 93%, 51% 93%, 0 54%, 0 0);
+        }
+        .slide_images{
+            width: 100%;
+            display: flex;
+            animation: slide 10s infinite;
+        }
+        .slide_images img{
+            width:100%
+        }
+        @keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
         
     </style>
 </head>
@@ -62,14 +108,23 @@
                 <li><a href="#">Who am I ?</a></li>
                 <li><a href="#">Contact me</a></li>
                 <li><a href="#">Some artworks</a></li>
+                <div class="slideshow">
+                    <div class="slide_images">
+                        <img src="white.jpg">
+                        <img src="red.jpg">
+                        <img src="orange.jpg">
+                        <img src="neon_blue.jpg">
+                        <img src="neon_yellow.jpg">
+                        <img src="nardo_blue.jpg">
+                        <img src="pink.jpg">
+                        
+                    </div>
+                </div>
                 
                 
             </ul>
         </nav>
     </header>
-    <br>
-    <br>
-    <center>Website is under progrbess. Will be ready soon.  Stay</center>
     
 </body>
 </html>
