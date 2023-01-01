@@ -31,6 +31,7 @@
             background-color: black;
             overflow: hidden;
             padding-bottom:3.5px ;
+            
         }
         .navbar li a{
             text-decoration: none;
@@ -38,11 +39,14 @@
             padding: 10px 90px;
             overflow: hidden;
             transition: 0.5s;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
         }
         
         body{
-            background-color: white;
+            background-image: url("background_image.jpg");
+            background-repeat:no-repeat;
+            background-size: cover;
         }
         .navbar a:hover{
             color: honeydew;
@@ -56,19 +60,27 @@
         }
         .slideshow{
             width:200px;
-            position: absolute;
-            top: 5%;
+            position:absolute;
+            top: 5.5%;
             left: 44%;
             overflow: hidden;
             clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 54%, 51% 93%, 51% 93%, 0 54%, 0 0);
+            border: 2px solid aqua;
+            
         }
         .slide_images{
             width: 100%;
             display: flex;
             animation: slide 10s infinite;
+            
+            
         }
         .slide_images img{
-            width:100%
+            width:100%;
+            clear: both;
+            
+            
+            
         }
         @keyframes slide{
     0%{
@@ -96,6 +108,56 @@
         transform: translateX(-300%);
     }
 }
+.rgbstrip{
+    width: 100%;
+    height: 3px;
+    background-repeat: repeat-x;
+    background: linear-gradient(
+        to right,#eb5252,#f78f2f,#f4c151,#75d850,#6284FF,#eb5252
+    );
+    animation: rgbstrip 10s linear infinite;
+    background-size: 200% 100%;
+    
+}
+
+    @keyframes rgbstrip {
+        0% {background-position:0;}
+        100% {background-position:800% 0;}
+        
+    }
+    h1{
+        position:relative;
+        font-size:55px;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 15px;
+        top: 300px;
+        left: 150px;
+        color:turquoise;
+        width: 85%;
+        text-align:center;
+        -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+        animation: animate 10s linear infinite;
+
+
+    }
+
+    @keyframes animate
+    {
+        0%,18%,20%,50%,60%,65%,80%,90%,92%
+        {
+            color:aquamarine;
+            text-shadow: none;
+        }
+        18%,20%,30%,50%,60%,65%,80%,90%,92%,100%
+        {
+            color:#fff;
+            text-shadow: 0 0 10px aqua,0 0 20px aqua,0 0 40px aqua,0 0 80px aqua,0 0 160px aqua
+        }
+        
+    }
+    
+
+
 
         
     </style>
@@ -108,6 +170,7 @@
                 <li><a href="#">Who am I ?</a></li>
                 <li><a href="#">Contact me</a></li>
                 <li><a href="#">Some artworks</a></li>
+                
                 <div class="slideshow">
                     <div class="slide_images">
                         <img src="white.jpg">
@@ -125,6 +188,11 @@
             </ul>
         </nav>
     </header>
+    <div class="rgbstrip"></div>
+    <main>
+        <h1>HELLO WORLD !<br>IT'S ME RAGHAV THERE.
+        </h1>
+    </main>
     
 </body>
 </html>
